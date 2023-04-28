@@ -12,6 +12,7 @@ import com.google.android.material.textfield.TextInputLayout
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
+
     private var percentual: Double = 0.7
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +49,8 @@ class MainActivity : AppCompatActivity() {
           //  Log.d("PDM23", "VALOR DO Percentual $alcoholValue");
             Log.d("PDM23", "No btCalcular, $percentual");
         })
-    }
+
+        }
     private fun checkIfIsEmpty(editText: EditText) : Boolean{
         try{
             if (editText.text.toString().trim().isEmpty()) {
@@ -100,8 +102,14 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Log.d("PDM23", "No onDestroy")
     }
+     fun onClickBtCalcular(v: View) {
+        //código do evento
+        percentual = 0.75
+        Log.d("PDM23", "No onClik, $percentual")
+    }
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putDouble("percentual",percentual)
         super.onSaveInstanceState(outState)
     }
 }
+
