@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/titulo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
@@ -53,9 +53,9 @@
             android:layout_marginHorizontal="30dp"
             android:ems="10"
             android:hint="Preço da Gasolina"
-            android:textColor="@color/black"
             android:inputType="numberDecimal"
             android:singleLine="true"
+            android:textColor="@color/black"
             android:visibility="visible"
             tools:visibility="visible" />
 
@@ -64,10 +64,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
-            android:textColor="@color/black"
             android:ems="10"
             android:hint="Preço do Álcool"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
 
         <Switch
             android:id="@+id/swPercentual"

@@ -44,9 +44,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Valor do Álcool é rentável",Toast.LENGTH_SHORT).show();
             else
                 Toast.makeText(this,"Valor da Gasolina é rentável",Toast.LENGTH_SHORT).show();
-
-         ///   Log.d("PDM23", "VALOR DO Percentual $gasValue");
-          //  Log.d("PDM23", "VALOR DO Percentual $alcoholValue");
             Log.d("PDM23", "No btCalcular, $percentual");
         })
 
