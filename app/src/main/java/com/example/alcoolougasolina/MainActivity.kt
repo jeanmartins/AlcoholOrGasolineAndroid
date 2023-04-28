@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (savedInstanceState != null) {
+            percentual=savedInstanceState.getDouble("percentual")
+        }
         Log.d("PDM23", "No onCreate, $percentual")
 
         val btCalc: Button = findViewById(R.id.btCalcular)
@@ -96,5 +99,9 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d("PDM23", "No onDestroy")
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putDouble("percentual",percentual)
+        super.onSaveInstanceState(outState)
     }
 }
