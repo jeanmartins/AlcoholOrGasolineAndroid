@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.textfield.TextInputLayout
 import java.lang.Exception
 
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
     private var percentual: Double = 0.7
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         setContentView(R.layout.activity_main)
         if (savedInstanceState != null) {
             percentual=savedInstanceState.getDouble("percentual")

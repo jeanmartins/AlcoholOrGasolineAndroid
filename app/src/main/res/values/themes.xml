@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.AlcoolOuGasolina" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#CB584C</item>
+        <item name="colorPrimary">#0099d7</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimaryDark">#1F1F1F</item>

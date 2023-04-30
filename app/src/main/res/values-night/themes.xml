@@ -18,7 +18,8 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
-        <item name="android:backgroundTint">@color/backDarkGreen</item>
+        <item name="android:backgroundTint">@color/black</item>
+
     </style>
 
     <style name="ThemeOverlay.AlcoolOuGasolina.FullscreenContainer" parent="">
