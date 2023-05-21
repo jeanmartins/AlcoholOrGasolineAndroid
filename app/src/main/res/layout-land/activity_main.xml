@@ -9,8 +9,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="577dp"
+        android:layout_height="309dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
         android:background="@drawable/rounded_layout"
@@ -18,16 +18,13 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="95dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="uma bomba de gasolina ilustrando o app"
             android:paddingVertical="10dp"
@@ -72,25 +69,35 @@
             android:textColor="@color/black"
             android:textSize="24sp" />
 
-        <Switch
-            android:id="@+id/swPercentual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginHorizontal="30dp"
-            android:text="75%"
-            android:textSize="36sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btCalcular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="20dp"
-            android:backgroundTint="#005c81"
-            android:onClick="onClickBtCalcular"
-            android:text="@string/calcular"
-            android:textColor="#fff" />
+            <Button
+                android:id="@+id/btCalcular"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_height="55sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="20dp"
+                android:backgroundTint="#005c81"
+                android:onClick="onClickBtCalcular"
+                android:text="@string/calcular"
+                android:textColor="#fff" />
+
+            <Space
+                android:layout_width="80sp"
+                android:layout_height="wrap_content" />
+
+            <Switch
+                android:id="@+id/swPercentual"
+                android:layout_width="147dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="170dp"
+                android:text="75%"
+                android:textSize="36sp" />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

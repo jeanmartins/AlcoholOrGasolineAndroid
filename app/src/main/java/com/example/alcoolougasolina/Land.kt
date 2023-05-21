@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 
 
-class MainActivity : AppCompatActivity() {
+class Land : AppCompatActivity() {
 
     private var percentual: Double = 0.7
     override fun onCreate(savedInstanceState: Bundle?) {

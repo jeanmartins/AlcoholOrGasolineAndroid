@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Which fuel?</string>
+    <string name="title">Gasoline or Alcohol?</string>
+    <string name="precoGasolina">Gas Price</string>
+    <string name="precoAlcool">Alcohol Price</string>
+    <string name="calcular">Calculate</string>
+</resources>

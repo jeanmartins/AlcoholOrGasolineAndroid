@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Com qual combustível?</string>
-    <string name="title_activity_introduction">Introduction</string>
-    <string name="dummy_button">Entendi</string>
-    <string name="dummy_content">Este aplicativo calcula se o Álcool está mais rentável que a Gasolina.</string>
+    <string name="title">Gasolina ou Álcool?</string>
+    <string name="precoGasolina">Preço da Gasolina</string>
+    <string name="precoAlcool">Preço do Álcool</string>
+    <string name="calcular">Calcular</string>
 </resources>
