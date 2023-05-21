@@ -1,34 +1,47 @@
 package com.example.alcoolougasolina
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.google.android.material.textfield.TextInputLayout
-import java.lang.Exception
+
 
 class MainActivity : AppCompatActivity() {
 
     private var percentual: Double = 0.7
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val shared : SharedPreferences = getSharedPreferences("switch", Context.MODE_PRIVATE);
+        var edShared = shared.edit();
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         setContentView(R.layout.activity_main)
-        if (savedInstanceState != null) {
-            percentual=savedInstanceState.getDouble("percentual")
-        }
-        Log.d("PDM23", "No onCreate, $percentual")
 
         val btCalc: Button = findViewById(R.id.btCalcular)
+        val mySwitch = findViewById<Switch>(R.id.swPercentual);
+        if(shared.getBoolean("switch",false) == true)
+            setPercentual(0.75);
+        Log.d("PDM23", "No onCreate, $percentual")
+
+
+        mySwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            // Lógica a ser executada quando o estado do CheckBox é alterado
+            if (isChecked) {
+                edShared.putBoolean("switch",isChecked);
+                edShared.commit();
+            }
+        }
+
         btCalc.setOnClickListener(View.OnClickListener {
             //código do evento
-            val mySwitch = findViewById<Switch>(R.id.swPercentual);
             val alcoholEditText = findViewById<EditText>(R.id.edAlcool);
             val isAlcoholEditTextEmpty = checkIfIsEmpty(alcoholEditText);
             val gasEditText = findViewById<EditText>(R.id.edGasolina);
@@ -106,10 +119,6 @@ class MainActivity : AppCompatActivity() {
         //código do evento
         percentual = 0.75
         Log.d("PDM23", "No onClik, $percentual")
-    }
-    override fun onSaveInstanceState(outState: Bundle) {
-        outState.putDouble("percentual",percentual)
-        super.onSaveInstanceState(outState)
     }
 }
 
